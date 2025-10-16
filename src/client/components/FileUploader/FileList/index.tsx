@@ -12,7 +12,7 @@ const FileList: FC<Props> = ({ files }) => {
             {files.map((file, index) => (
                 <li key={index} className="flex justify-between border-b py-2">
                     <span>{file.name}</span>
-                    <span>{file.size / 1000} MB</span>
+                    <span>{file.size / 1000} KB</span>
                 </li>
             ))}
         </ul>

@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import { describe, expect, test } from 'vitest';
 
-import FileList from '../components/FileUploader/FileList';
+import FileList from '../FileUploader/FileList';
 
 describe('FileList', () => {
     test('should display as many elements as there are files', () => {

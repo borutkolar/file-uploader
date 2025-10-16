@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import { describe, expect, test } from 'vitest';
 
-import FileUploader from '../components/FileUploader';
+import FileUploader from '../FileUploader';
 
 describe('FileUploader', () => {
     test('should allow multiple file uploads', () => {
