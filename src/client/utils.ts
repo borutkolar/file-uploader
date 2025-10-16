@@ -1,4 +1,4 @@
-import { type UploadedFile } from './components/FileUploader/types';
+import { type UploadedFile } from './components/types';
 
 type FilesResponse = {
     files: UploadedFile[];

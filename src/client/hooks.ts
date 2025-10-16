@@ -1,6 +1,6 @@
 import { useCallback, useState } from 'react';
 
-import { type UploadedFile } from './components/FileUploader/types';
+import { type UploadedFile } from './components/types';
 import { getFiles } from './utils';
 
 export const useFiles = () => {

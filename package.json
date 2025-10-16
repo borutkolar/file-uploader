@@ -10,7 +10,7 @@
         "lint": "eslint --ext .ts,.tsx .",
         "typecheck": "tsc --noEmit",
         "test:server": "vitest run src/server/test/e2e.spec.ts",
-        "test:client": "vitest run src/client"
+        "test:client": "vitest run src/client/components"
     },
     "dependencies": {
         "body-parser": "^1.20.2",

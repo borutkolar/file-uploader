@@ -1,6 +1,6 @@
 import { type FC } from 'react';
 
-import { type UploadedFile } from '../types';
+import { type UploadedFile } from './types';
 
 interface Props {
     files: UploadedFile[];
