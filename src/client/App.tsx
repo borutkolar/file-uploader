@@ -21,6 +21,7 @@ export const App = (): ReactElement => {
                 const failedUploads: string[] = [];
                 const jsonPromises = responses.map(async (response, index) => {
                     if (!response.ok) {
+                        // Another option would be to display a message/toast notification for each failed upload.
                         const fileName = Array.from(files)[index]?.name;
                         failedUploads.push(fileName);
                         throw new Error(`Failed to upload ${fileName}: ${response.status} ${response.statusText}`);
