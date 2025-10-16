@@ -9,7 +9,6 @@ export const useFiles = () => {
     const getAndSetFiles = useCallback(() => {
         getFiles()
             .then((data) => {
-                console.log('data', data);
                 setFiles(data.files);
             })
             .catch((error) => {

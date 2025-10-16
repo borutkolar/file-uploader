@@ -8,11 +8,15 @@ interface Props {
 
 const FileList: FC<Props> = ({ files }) => {
     return (
-        <ul className="w-full" data-testid="file-list">
+        <ul aria-label={`Uploaded files: ${files.length}`} className="w-full" data-testid="file-list">
             {files.map((file, index) => (
                 <li key={index} className="flex justify-between border-b py-2">
-                    <span>{file.name}</span>
-                    <span>{file.size / 1000} KB</span>
+                    <span aria-label={`File name: ${file.name}`} className="font-medium text-gray-900">
+                        {file.name}
+                    </span>
+                    <span className="text-gray-600 text-sm" aria-label={`File size: ${file.size} bytes`}>
+                        {file.size / 1000} KB
+                    </span>
                 </li>
             ))}
         </ul>

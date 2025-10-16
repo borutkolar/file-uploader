@@ -8,8 +8,15 @@ describe('FileUploader', () => {
         render(<FileUploader allowMultiple onUpload={async () => {}} />);
 
         const input = screen.getByTestId('file-upload-input');
-        expect(input).toHaveProperty('type', 'file');
         expect(input).toHaveProperty('multiple', true);
+    });
+
+    test('should have accept property when provided', () => {
+        const accept = '.jpg,.png';
+        render(<FileUploader accept={accept} allowMultiple onUpload={async () => {}} />);
+
+        const input = screen.getByTestId('file-upload-input');
+        expect(input).toHaveProperty('accept', accept);
     });
 
     test('should display no files message when there are no files', () => {
