@@ -8,7 +8,7 @@ interface Props {
 
 const FileList: FC<Props> = ({ files }) => {
     return (
-        <ul className="w-full">
+        <ul className="w-full" data-testid="file-list">
             {files.map((file, index) => (
                 <li key={index} className="flex justify-between border-b py-2">
                     <span>{file.name}</span>
